@@ -7,9 +7,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h2>Соснин Роман</h2>
+        <p>Занимаюсь разработкой десктопных и мобильных приложений на C++ с использованием фреймворка Qt.</p>
         <p>
-          Текст писать тут
+          Решил пройти курс, чтобы систематизировать знания о React&apos;е для применения этой библиотеки в рабочих
+          проектах.
         </p>
+        <p>Telegram: @sosnin_roman</p>
       </header>
     </div>
   );
