@@ -1,56 +1,80 @@
-/**
- * Функции написанные здесь пригодятся на последующих уроках
- * С помощью этих функций мы будем добавлять элементы в список для проверки динамической загрузки
- * Поэтому в идеале чтобы функции возвращали случайные данные, но в то же время не абракадабру.
- * В целом сделайте так, как вам будет удобно.
- * */
+interface Category {
+    id: string,
+    name: string,
+    photo?: string
+}
+interface Product {
+    id: string,
+    name: string,
+    photo: string,
+    desc?: string,
+    createdAt: string,
+    oldPrice?: string,
+    price: number,
+    category: Category
+}
 
-/**
- * Нужно создать тип Category, он будет использоваться ниже.
- * Категория содержит
- * - id (строка)
- * - name (строка)
- * - photo (строка, необязательно)
- *
- * Продукт (Product) содержит
- * - id (строка)
- * - name (строка)
- * - photo (строка)
- * - desc (строка, необязательно)
- * - createdAt (строка)
- * - oldPrice (число, необязательно)
- * - price (число)
- * - category (Категория)
- *
- * Операция (Operation) может быть либо тратой (Cost), либо доходом (Profit)
- *
- * Трата (Cost) содержит
- * - id (строка)
- * - name (строка)
- * - desc (строка, необязательно)
- * - createdAt (строка)
- * - amount (число)
- * - category (Категория)
- * - type ('Cost')
- *
- * Доход (Profit) содержит
- * - id (строка)
- * - name (строка)
- * - desc (строка, необязательно)
- * - createdAt (строка)
- * - amount (число)
- * - category (Категория)
- * - type ('Profit')
- * */
+type Operation = Cost | Profit
+
+interface Cost {
+    id: string,
+    name: string,
+    desc?: string,
+    createdAt: string,
+    amount: number,
+    category: Category,
+    type: 'Cost'
+}
+
+interface Profit {
+    id: string,
+    name: string,
+    desc?: string,
+    createdAt: string,
+    amount: number,
+    category: Category,
+    type: 'Profit'
+}
+
+function getRandomNumber(min: number, max: number) {
+    return Math.random() * (max - min) + min;
+}
 
 /**
  * Создает случайный продукт (Product).
  * Принимает дату создания (строка)
  * */
-// export const createRandomProduct = (createdAt: string) => {};
+export const createRandomProduct = (createdAt: string) => {
+    return {
+        id: `id${getRandomNumber(1, 5)}`,
+        name: `Product #${getRandomNumber(1, 5)}`,
+        photo: `Photo #${getRandomNumber(1, 5)}`,
+        createdAt: createdAt,
+        price: `${getRandomNumber(1, 500)}`,
+        category: {
+            id: `id${getRandomNumber(1, 5)}`,
+            name: `Category ${getRandomNumber(1, 5)}`,
+        },
+        desc: "",
+        oldPrice: ""
+    }
+};
 
 /**
  * Создает случайную операцию (Operation).
  * Принимает дату создания (строка)
  * */
-// export const createRandomOperation = (createdAt: string) => {};
+export const createRandomOperation = (createdAt: string) => {
+    return {
+        type: getRandomNumber(1, 10) > 5 ? 'Cost' : 'Profit',
+        id: `id${getRandomNumber(1, 5)}`,
+        name: `Operation #${getRandomNumber(1, 5)}`,
+        createdAt: createdAt,
+        amount: getRandomNumber(1, 500),
+        category: {
+            id: `id${getRandomNumber(1, 5)}`,
+            name: `Category ${getRandomNumber(1, 5)}`
+        },
+        desc: ""
+    }
+};
