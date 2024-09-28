@@ -1,0 +1,11 @@
+.appheader {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.appheader-content {
+    margin: 5px;
+}
