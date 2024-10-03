@@ -1,10 +1,10 @@
-import { Logo } from './Logo'
+import { Logo } from './Logo';
 
 const meta = {
-    title: 'Otus/Common/Logo',
-    component: Logo,
+  title: 'Otus/Common/Logo',
+  component: Logo,
 };
 
-export default meta
+export default meta;
 
-export const Default = {}
+export const Default = {};

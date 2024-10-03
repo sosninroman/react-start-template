@@ -1,10 +1,10 @@
-import { Header } from './Header'
+import { Header } from './Header';
 
 const meta = {
-    title: 'Otus/Common/Header',
-    component: Header
-}
+  title: 'Otus/Common/Header',
+  component: Header,
+};
 
-export default meta
+export default meta;
 
-export const Default = {}
+export const Default = {};

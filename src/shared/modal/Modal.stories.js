@@ -1,18 +1,23 @@
-import { Modal } from './Modal'
+import { React } from 'react';
+import { Modal } from './Modal';
 
 const meta = {
-    title: 'Otus/Common/Modal',
-    component: Modal,
-    argTypes: {
-        visible: { control: 'boolean' },
-    },
-}
+  title: 'Otus/Common/Modal',
+  component: Modal,
+  argTypes: {
+    visible: { control: 'boolean' },
+  },
+};
 
-export default meta
+export default meta;
 
 export const Default = {
-    args: {
-        visible: true,
-        children: [<p style={{ textAlign: "center" }}>"Hello, World!" </p>]
-    },
-}
+  args: {
+    visible: true,
+    children: [
+      <p key={1} style={{ textAlign: 'center' }}>
+        Hello, World!
+      </p>,
+    ],
+  },
+};

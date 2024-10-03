@@ -1,20 +1,20 @@
-import { CartItem } from "./CartItem"
+import { CartItem } from './CartItem';
 
 const meta = {
-    title: 'Otus/Shopping/CartItem',
-    component: CartItem,
-    tags: ['autodocs'],
-    argTypes: {
-        title: {
-            control: 'text'
-        },
+  title: 'Otus/Shopping/CartItem',
+  component: CartItem,
+  tags: ['autodocs'],
+  argTypes: {
+    title: {
+      control: 'text',
     },
-}
+  },
+};
 
-export default meta
+export default meta;
 
 export const Default = {
-    args: {
-        title: "Awesome thing",
-    },
-}
+  args: {
+    title: 'Awesome thing',
+  },
+};

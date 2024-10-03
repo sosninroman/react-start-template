@@ -1,14 +1,15 @@
-import { Layout } from './Layout'
+import { React } from 'react';
+import { Layout } from './Layout';
 
 const meta = {
-    title: 'Otus/Common/Layout',
-    component: Layout,
-}
+  title: 'Otus/Common/Layout',
+  component: Layout,
+};
 
-export default meta
+export default meta;
 
 export const Default = {
-    args: {
-        children: [<div style={{ margins: 0, height: "500px" }} />]
-    },
-}
+  args: {
+    children: [<div key={1} style={{ margins: 0, height: '500px' }} />],
+  },
+};
