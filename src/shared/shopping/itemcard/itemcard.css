@@ -1,0 +1,54 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.card__text {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    line-height: 1.5em;
+}
+
+.card__title {
+    margin: 0;
+}
+
+.card__description {
+    margin: 20px 0;
+}
+
+.card__price-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.card__price {
+    flex-grow: 1;
+    margin: 0 10px 0 0;
+
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    max-height: 1.5em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__price::after {
+    content: " \20BD";
+    font-size: 1.2em;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.card__button {
+    flex-shrink: 0;
+}

@@ -1,0 +1,4 @@
+.page__images {
+    white-space: nowrap;
+    overflow-x: auto;
+}
