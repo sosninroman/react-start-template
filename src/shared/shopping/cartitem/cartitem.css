@@ -1,0 +1,23 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 2px;
+    border-color: grey;
+    border-style: solid;
+    gap: 10px;
+    width: 300px;
+}
+
+.cart-item__remove-button {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cart-item__title {
+    margin: 10px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
