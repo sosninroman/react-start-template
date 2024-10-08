@@ -1,7 +1,8 @@
-import { React } from 'react';
+import React from 'react';
 import { Modal } from './Modal';
+import type { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta<typeof Modal> = {
   title: 'Otus/Common/Modal',
   component: Modal,
   argTypes: {
@@ -11,7 +12,7 @@ const meta = {
 
 export default meta;
 
-export const Default = {
+export const Default: StoryObj<typeof Modal> = {
   args: {
     visible: true,
     children: [
