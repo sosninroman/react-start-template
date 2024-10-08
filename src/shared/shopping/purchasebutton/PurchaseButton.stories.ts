@@ -1,6 +1,7 @@
 import { PurchaseButton } from './PurchaseButton';
+import { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta<typeof PurchaseButton> = {
   title: 'Otus/Shopping/PurchaseButton',
   component: PurchaseButton,
   tags: ['autodocs'],
@@ -20,15 +21,16 @@ const meta = {
 };
 
 export default meta;
+type Story = StoryObj<typeof PurchaseButton>;
 
-export const EmptyCartButton = {
+export const EmptyCartButton: Story = {
   name: 'Without items',
   args: {
     count: 0,
   },
 };
 
-export const ButtonWithPurchase = {
+export const ButtonWithPurchase: Story = {
   name: 'With items',
   args: {
     count: 2,

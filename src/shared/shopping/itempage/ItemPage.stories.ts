@@ -1,6 +1,7 @@
 import { ItemPage } from './ItemPage';
+import { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta<typeof ItemPage> = {
   title: 'Otus/Shopping/ItemPage',
   component: ItemPage,
   tags: ['autodocs'],
@@ -8,7 +9,7 @@ const meta = {
 
 export default meta;
 
-export const Default = {
+export const Default: StoryObj<typeof ItemPage> = {
   args: {
     price: 100,
     title: 'Awesome thing',

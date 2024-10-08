@@ -1,6 +1,7 @@
 import { CartItem } from './CartItem';
+import type { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta<typeof CartItem> = {
   title: 'Otus/Shopping/CartItem',
   component: CartItem,
   tags: ['autodocs'],
@@ -13,7 +14,7 @@ const meta = {
 
 export default meta;
 
-export const Default = {
+export const Default: StoryObj<typeof CartItem> = {
   args: {
     title: 'Awesome thing',
   },
