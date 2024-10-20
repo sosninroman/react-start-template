@@ -1,0 +1,9 @@
+[theme="light"] {
+    --text-color: black;
+    --bg-color: #ede5d1;
+}
+
+[theme="dark"] {
+    --text-color: white;
+    --bg-color: #202934;
+}
