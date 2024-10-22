@@ -19,6 +19,6 @@ export const Default: StoryObj<typeof Header> = {
           <Header />
         </ThemeProvider>
       </LocalizationProvider>
-    )
+    );
   },
 };

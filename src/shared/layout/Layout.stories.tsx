@@ -18,6 +18,6 @@ export const Default: StoryObj<typeof Layout> = {
           <div style={{ margin: 0, height: '500px' }} />
         </Layout>
       </ThemeProvider>
-    )
+    );
   },
 };
