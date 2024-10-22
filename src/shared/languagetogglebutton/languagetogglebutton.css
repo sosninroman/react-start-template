@@ -1,0 +1,7 @@
+.language-toggle-button:hover {
+    cursor: pointer;
+}
+
+.language-toggle-button {
+    color: var(--text-color);
+}
