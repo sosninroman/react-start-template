@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ThemeProvider } from '../theming/ThemeProvider'
+import { ThemeProvider } from '../theming/ThemeProvider';
 import { LocalizationProvider } from '../localization/LocalizationProvider';
 
 function App() {

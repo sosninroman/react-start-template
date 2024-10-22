@@ -4,32 +4,37 @@ import { ThemeProvider, useTheme, Theme } from '../../theming/ThemeProvider';
 import React from 'react';
 
 const meta: Meta<typeof ThemeToggleButton> = {
-    title: 'Otus/Common/ThemeToggleButton',
-    component: ThemeToggleButton,
+  title: 'Otus/Common/ThemeToggleButton',
+  component: ThemeToggleButton,
 };
 
 export default meta;
 
 const ThemeToggleButtonStory = () => {
-    const { theme } = useTheme()
+  const { theme } = useTheme();
 
-    return (
-        <div style={{
-            width: 50, height: 50,
-            backgroundColor: ((theme === Theme.light) ? "white" : "black"),
-            display: "flex", alignItems: "center", justifyContent: "center"
-        }}>
-            <ThemeToggleButton />
-        </div>
-    );
+  return (
+    <div
+      style={{
+        width: 50,
+        height: 50,
+        backgroundColor: theme === Theme.light ? 'white' : 'black',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <ThemeToggleButton />
+    </div>
+  );
 };
 
 export const Default: StoryObj<typeof ThemeToggleButton> = {
-    render: () => {
-        return (
-            <ThemeProvider>
-                <ThemeToggleButtonStory />
-            </ThemeProvider>
-        )
-    },
+  render: () => {
+    return (
+      <ThemeProvider>
+        <ThemeToggleButtonStory />
+      </ThemeProvider>
+    );
+  },
 };
