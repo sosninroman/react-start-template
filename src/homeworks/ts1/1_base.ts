@@ -7,7 +7,7 @@ export const addPlus = (string: string): string => `+${string}`;
 
 export const removeFirstZeros = (value: string): string => value.replace(/^(-)?[0]+(-?\d+.*)$/, '$1$2');
 
-export const getBeautifulNumber = (value: number, separator: string = ' '): string =>
+export const getBeautifulNumber = (value: number, separator = ' '): string =>
   value?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
 
 export const round = (value: number, accuracy = 2): number => {
@@ -19,8 +19,8 @@ const transformRegexp =
   /(matrix\(-?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, )(-?\d+(\.\d+)?), (-?\d+(\.\d+)?)\)/;
 
 interface CssTransform {
-  x: number,
-  y: number
+  x: number;
+  y: number;
 }
 
 export const getTransformFromCss = (transformCssString: string): CssTransform => {
@@ -36,7 +36,7 @@ export const getColorContrastValue = ([red, green, blue]: [number, number, numbe
   // http://www.w3.org/TR/AERT#color-contrast
   Math.round((red * 299 + green * 587 + blue * 114) / 1000);
 
-type ContrastType = "black" | "white"
+type ContrastType = 'black' | 'white';
 
 export const getContrastType = (contrastValue: number): ContrastType => (contrastValue > 125 ? 'black' : 'white');
 
@@ -62,23 +62,25 @@ export const hex2rgb = (color: string): [number, number, number] | never => {
 };
 
 interface NumberedValue {
-  value: number,
-  number: number
+  value: number;
+  number: number;
 }
 
-export const getNumberedArray = (arr: Array<number>): Array<NumberedValue> => arr.map((value, number) => ({ value, number }));
-export const toStringArray = (arr: Array<NumberedValue>): Array<string> => arr.map(({ value, number }) => `${value}_${number}`);
+export const getNumberedArray = (arr: Array<number>): Array<NumberedValue> =>
+  arr.map((value, number) => ({ value, number }));
+export const toStringArray = (arr: Array<NumberedValue>): Array<string> =>
+  arr.map(({ value, number }) => `${value}_${number}`);
 
 interface Customer {
-  id: keyof Account,
-  name: string,
-  age: number,
-  isSubscribed: boolean
+  id: keyof Account;
+  name: string;
+  age: number;
+  isSubscribed: boolean;
 }
 
 type Account = {
-  [key: number]: { name: string, age: number, isSubscribed: boolean }
-}
+  [key: number]: { name: string; age: number; isSubscribed: boolean };
+};
 
 export const transformCustomers = (customers: Array<Customer>): Account => {
   return customers.reduce((acc: Account, customer: Customer): Account => {
